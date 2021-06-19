@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct HomeHeaderView: View {
+    
+    enum HomeHeaderActions {
+        case profile
+        //add new cases if wanted
+    }
+    
+    typealias HomeHeaderActionsHandler = (_ action: HomeHeaderActions) -> Void
+    let handler: HomeHeaderActionsHandler
+    init(handler: @escaping HomeHeaderView.HomeHeaderActionsHandler) {
+        self.handler = handler
+    }
+    
     var body: some View {
         HStack(spacing: 20) {
             Image.search
@@ -15,10 +27,14 @@ struct HomeHeaderView: View {
             Image.invite
             Image.calendar
             Image.notificationBell
-            Image.profile_pic
-                .resizable()
-                .frame(width: 32, height: 32)
-                .cornerRadius(11)
+            Button(action: {
+                handler(.profile)
+            }, label: {
+                Image.profile_pic
+                    .resizable()
+                    .frame(width: 32, height: 32)
+                    .cornerRadius(11)
+            })
         }
         .font(Font.Nunito.bold(size: 24))
         .frame(maxWidth: .infinity, maxHeight: 50)
@@ -28,8 +44,8 @@ struct HomeHeaderView: View {
 
 struct HomeHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeHeaderView()
-        HomeHeaderView()
+        HomeHeaderView { _ in }
+        HomeHeaderView { _ in }
             .previewLayout(.sizeThatFits)
     }
 }

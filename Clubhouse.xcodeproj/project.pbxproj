@@ -401,7 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Clubhouse/Preview Content\"";
-				DEVELOPMENT_TEAM = N593J3PQL4;
+				DEVELOPMENT_TEAM = G779QJ727X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Clubhouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -409,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sergiosepulveda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SergioSepulveda.Clubhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,7 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Clubhouse/Preview Content\"";
-				DEVELOPMENT_TEAM = N593J3PQL4;
+				DEVELOPMENT_TEAM = G779QJ727X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Clubhouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -431,7 +431,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sergiosepulveda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SergioSepulveda.Clubhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

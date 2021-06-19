@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+    
+    enum ProfileHeaderActions {
+        case back
+    }
+    
+    typealias ProfileHeaderActionHandler = ( _ action: ProfileHeaderActions) -> Void
+    
+    let handler: ProfileHeaderActionHandler
+    
+    internal init(handler: @escaping ProfileHeaderView.ProfileHeaderActionHandler) {
+        self.handler = handler
+    }
+    
     var body: some View {
         HStack(spacing: 28) {
-            Image.back
+            Button(action: {
+                handler(.back)
+            }, label: {
+                Image.back
+            })
             Spacer()
             Text("@")
             Image.gear
@@ -24,6 +41,6 @@ struct ProfileHeaderView: View {
 
 struct ProfileHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeaderView()
+        ProfileHeaderView{ _ in }
     }
 }
