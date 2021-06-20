@@ -24,7 +24,7 @@ struct OthersView: View {
             
             Text(title)
                 .font(Font.Nunito.bold(size: 14))
-                .foregroundColor(Color.customLightGray)
+                .foregroundColor(Color.customGrey)
             
             LazyVGrid(columns: othersColumn, alignment: .leading, spacing: 10) {
                 ForEach(people) { person in

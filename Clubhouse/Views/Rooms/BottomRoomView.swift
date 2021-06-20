@@ -9,15 +9,32 @@ import SwiftUI
 
 struct BottomRoomView: View {
     
+    enum BottomRoomViewActions {
+        case leave
+    }
+    
+    typealias BottomRoomActionHandler = (_ action: BottomRoomViewActions) -> Void
+    let handler: BottomRoomActionHandler
+    
+    internal init(handler: @escaping BottomRoomView.BottomRoomActionHandler) {
+        self.handler = handler
+    }
+    
     var body: some View {
         HStack(spacing: 22) {
-            Text("✌🏼 Leave quietly")
-                .font(Font.Nunito.bold(size: 16))
-                .foregroundColor(Color.customRed)
-                .padding(.horizontal, 13)
-                .padding(.vertical, 8)
-                .background(Color.customLightGray)
-                .cornerRadius(18)
+            
+            Button(action: {
+                handler(.leave)
+            }, label: {
+                
+                Text("✌🏼 Leave quietly")
+                    .font(Font.Nunito.bold(size: 16))
+                    .foregroundColor(Color.customRed)
+                    .padding(.horizontal, 13)
+                    .padding(.vertical, 8)
+                    .background(Color.customLightGray)
+                    .cornerRadius(18)
+            })
             
             Spacer()
             
@@ -43,6 +60,6 @@ struct BottomRoomView: View {
 
 struct BottomRoomView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomRoomView()
+        BottomRoomView { _ in }
     }
 }
